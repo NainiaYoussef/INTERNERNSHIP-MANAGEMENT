@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #f14cf7, #051541);
+    color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slide-down 1s forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    flex: 1;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.more-button {
+    cursor: pointer;
+}
+
+.more-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.more-menu li {
+    width: 200px;
+}
+
+.more-menu li a {
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.more-menu li a:hover {
+    background: #f0f0f0;
+}
+
+.more-menu.open {
+    display: block;
+    max-height: 500px; 
+}
+
+.logged {
+    display: flex;
+    align-items: center;
+}
+
+.logged span {
+    margin-right: 10px;
+}
+
+.logged .logout a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 80px; 
+    border-radius: 10px;
+}
+
+.container th,
+.container td {
+    border: 1px solid #8d6e63;
+    padding: 8px;
+}
+
+.container th {
+    background-color: #b5009db9;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.container tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container tbody tr:hover {
+    background-color: #fce8b6;
+}

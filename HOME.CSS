@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #7c136b, #faf8f7); /* Beige to brown gradient */
+    background-image: url(MENU.jpg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.nav-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 80%;
+    margin-left: 10%; /* Move the nav items slightly to the left */
+}
+
+.nav-item {
+    position: relative; /* Required for tooltip positioning */
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    background: linear-gradient(to bottom, #67137c8c, #faf8f7a9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+    margin-bottom: 10px; /* Space between nav items */
+}
+
+.nav-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.nav-item section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item img {
+    width: 80px; /* Adjust image size as needed */
+    height: 80px; /* Adjust image size as needed */
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.nav-item h3 {
+    margin: 0;
+    font-size: 14px; /* Decrease font size */
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    right: 50%; /* Adjust position to right-middle */
+    transform: translate(50%, -50%);
+    font-size: 1.5em; /* Decrease font size */
+   
+    text-align: center;
+    animation: slide-in 2s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #800080, #ff69b4); /* Purple to pink gradient */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px; /* Wider than the nav item */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevents tooltip from being interactive */
+}
+
+.nav-item:hover .tooltip {
+    opacity: 1;
+}
+
+/* Top-right buttons styles */
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.top-right-buttons button, .top-right-buttons a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.top-right-buttons button:hover, .top-right-buttons a:hover {
+    background-color: pink;
+}

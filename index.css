@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #a74ad1, #ff6ec7);
+    background-image: url(img\ test.png.jpg);
+
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 350px; /* Increased width */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.575); /* Slightly transparent */
+    padding: 40px 20px; /* Increased padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: #3c2f2f;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #a74ad1;
+}
+
+.input-group input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border: 1px solid #a74ad1;
+    margin-top: 8px;
+    border-radius: 30px;
+}
+
+.input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    color: #a74ad1;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    color: #a74ad1;
+}
+
+.remember-forgot .forgot-password {
+    color: #a74ad1;
+    text-decoration: none;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 20px; /* Increased padding */
+    border: none;
+    background-color: #a74ad1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px; /* Increased font size */
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+
+.button-group button:hover {
+    background-color: #ff6ec7;
+}
+
+.erreur {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.login-banner {
+    padding: 20px 0; /* Increased padding */
+    color: #a74ad1; /* Purple color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 60px;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.create-account a {
+    color: #a74ad1; /* Purple color */
+    text-decoration: none;
+    font-weight: bold;
+}
